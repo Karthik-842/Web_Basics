@@ -7,18 +7,20 @@
     </head>
     <body>
         <center>
-            <h1>
-                Error Makes Clever Academy 🚀
-            </h1>
-            <h5>Training | Tech News | Freshers Guide</h5>
+            <header>
+                <h1>
+                    Error Makes Clever Academy 🚀
+                </h1>
+                <h5>Training | Tech News | Freshers Guide</h5>
+            </header>
             <p>Empowering young developers to level up their skills through training in software development technologies 👨‍💻</p>
             <hr>
             <h1>Registration Form</h1>
-            <form>
+            <form action="index.php" method="post" enctype="multipart/form-data">
                 <table>
                     <tr>
                         <td>Name:</td>
-                        <td><input type="text"/></td>
+                        <td><input type="text" minlength="6" maxlength="11" required/></td>
                     </tr>
                     <tr>
                         <td>Age:</td>
@@ -31,8 +33,20 @@
                     </tr>
                     <tr>
                         <td>Email:</td>
-                        <td><input type="email"/></td>
+                        <td><input type="email" placeholder="Enter the Email"/></td>
                     </tr>
+                    <tr>
+                        <td>DOB</td>
+                        <td><input type="date" placeholder="Enter the date of birth"/></td>
+                    </tr>
+                    <tr>
+                        <td>Phone Number:</td>
+                        <td><input type="tel" placeholder="Enter the Phone Number" pattern="[0-9]"/></td>
+                    </tr>
+                    <tr>
+                        <td>Address:</td>
+                        <td><textarea rows="4" cols="50"></textarea></td>
+                    </tr
                     <tr>
                         <td>Select a Course: </td>
                         <td>
@@ -56,10 +70,11 @@
                 </table>
             </form>
             <hr>
-
-            <a href="D:\Basic Concepts\html-youtube-tutorial-main\html-youtube-tutorial-main\EMC Web Page HTML Project\starter\index.html">Home</a> | 
-            <a href="https://github.com">GitHub</a> |
-            <a href="https://youtube.com">YouTube</a>
+            <footer style="background-color: black;">
+                <a href="D:\Basic Concepts\html-youtube-tutorial-main\html-youtube-tutorial-main\EMC Web Page HTML Project\starter\index.html" style="color: white;">Home</a> | 
+                <a href="https://github.com" style="color: white;">GitHub</a> |
+                <a href="https://youtube.com" style="color: white;">YouTube</a>
+            </footer>
             <hr>
         </center>
 
