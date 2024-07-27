@@ -52,6 +52,7 @@
           "overflow: clip"
         ]
       }
-    ]
+    ],
+    "button-type": "off"
   }
 }
