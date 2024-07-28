@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
 }
-
+/* 
 #overflo-scroll{
     border: 2px solid black;
     height: 200px;
@@ -194,3 +194,116 @@ img
     font-size: large;
     text-shadow: 10px 10px 10px blueviolet;
 }
+ */
+/* 
+ Imaging
+
+ .img-1 img {
+    width: 200px;
+    height: 200px;
+ }
+
+ .img-1
+ {
+    display: inline-block;
+    width: 250px;
+    height: 250px;
+    text-align: center;
+    border: 2px solid hsla(0, 0%, 50%, 0.918);
+    border-radius: 5px;
+    margin: 20px;
+    padding: 20px;
+    cursor: pointer;
+}
+
+.img-1 img:hover
+{
+    border: 2px solid hsla(0, 0%, 50%, 0.295);
+}
+
+.imaging
+{
+    text-align: center;
+    box-shadow: 3px 3px 3px gray;
+    margin: 20px;
+}
+
+label
+{
+    padding-top: 20px;
+} */
+
+
+/* 
+Icons
+
+i{
+    padding: 20px;
+    transition-duration: 200ms;
+    border: 2px solid hsla(0, 0%, 0%, 0.685);
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 20px;
+}
+
+i:hover{
+    background-color: hsla(0, 0%, 0%, 0.1);
+    border: 2px solid hsla(0, 0%, 0%, 0.9);
+}
+
+div{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+} 
+    
+*/
+/* 
+.box1
+{
+    height: 100px;
+    width: 100px;
+    background-color: yellow;
+    text-align: center;
+}
+.box2
+{
+    height: 100px;
+    width: 100px;
+    background-color: green;
+    text-align: center;
+}
+.box3
+{
+    height: 100px;
+    width: 100px;
+    background-color: red;
+    text-align: center;
+}
+.box4
+{
+    height: 100px;
+    width: 100px;
+    background-color: blue;
+    text-align: center;
+}
+.box5
+{
+    height: 100px;
+    width: 100px;
+    background-color: violet;
+    text-align: center;
+}
+
+label
+{
+    font-size: x-large;
+    font-weight: bold;
+}
+.flexbox
+{
+    display: flex;
+    flex-wrap: wrap;
+
+} */
+
