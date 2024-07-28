@@ -205,3 +205,100 @@ function convert()
         rs="Invalid selection";
     }
 } */
+
+/* 
+
+spread operator: ... allows an iterable such as an array or string to be expanded into separate elements.
+
+let a=[1,2,3,5,8];
+let max=Math.max(...a);
+console.log(max) 
+
+*/
+/* 
+
+
+rest parameters: opposite of spread operator. (bundles)
+
+let a=1;
+
+let b=2;
+
+let c=3;
+
+let d=4;
+
+add(a,b,c,d);  // [1, 2, 3, 4]
+
+function add(... e)
+{
+    console.log(e);
+} 
+    
+*/
+/* 
+
+
+Dice Roller program 
+
+function rollDice()
+{
+
+    const result= document.getElementById("result");
+    const d = document.getElementById("dice").value;
+    const e = document.getElementById("dimage");
+
+    const value=[]; 
+    const images=[];
+
+    for(let i=0; i<d; i++)
+    {
+        let values=Math.floor(Math.random()*6)+1
+        value.push(values);
+        images.push(`<img src="img/${values}.png"/>`);
+    }
+    
+    result.textContent=value.join(`,`);
+    e.innerHTML=images.join(" ");
+}
+ */
+/* 
+
+
+Random Password Generator:
+
+function generatePassword( passwordLength, incLowerCase, incUpperCase, incNumbers, incSymbols)
+{
+    let password="";
+    const lower=`abcdefghijklmnopqrstuvwxyz`;
+    const upper=`ABCDEFGHIJKLMNOPQRSTUVWXYZ`;
+    const numbers=`0123456789`;
+    const symbols=`!@#$%^&*()_+{}[]|:;<>,.?/~`;
+    let allowedchar=""; 
+
+    allowedchar+= incLowerCase? lower:"";
+    allowedchar+= incUpperCase? upper:"";
+    allowedchar+= incNumbers? numbers:"";
+    allowedchar+= incSymbols? symbols:"";
+    
+    for(let i=0; i<passwordLength; i++)
+    {
+        const random = Math.floor(Math.random()*allowedchar.length);
+        password+=allowedchar[random];  // append random character to password.  // Math.random() * allowedchar.length gives a random number between 0 and allowedchar.length-1. Math.floor() rounds down to the nearest integer.  // allowedchar[random] gets the character at the random index.  // += is used to append character to string.  // This loop will repeat until password length is achieved.  // We will keep generating random characters until we
+    }
+    return password;
+}
+
+const passwordLength =12; 
+const incLowerCase =  true;
+const incUpperCase = true;
+const incNumbers = true;
+const incSymbols = true;
+
+let password;
+password = generatePassword(passwordLength,incLowerCase,incUpperCase,incNumbers,incSymbols);
+console.log(password); 
+
+*/
+
+
