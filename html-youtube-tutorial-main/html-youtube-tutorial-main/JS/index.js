@@ -552,37 +552,203 @@ d1.getSound(); // Buddy sounds Woof
 d1.breedName(); // Buddy is a Labrador
 
 
+Getter and setter functions:
+
+class Animal
+{
+    constructor(name, sound)
+    {
+        this.name=name;
+        this.sound=sound;
+        this.getSound = function(){console.log(`${this.name} ${this.sound}`);};
+    }
+
+    set animalName(name) {
+        this.name=name;
+    }
+    get animalName() {
+        return this.name;
+    }
+    set animalSound(sound) {
+        this.sound=sound;
+    }
+    get animalSound() {
+        return this.sound;
+    }
+}
+
+const p = new Animal("Dog","Barks");
+
+console.log(p.animalName); // Dog
+
+console.log(p.animalSound); // Barks
+
+p.getSound(); // Dog Barks
+
+Destructuring: extract values from arrays and objects then assign them to variables in a convenient manner.
+[] - to perform array destructuring.
+{} - to perform object destructuring.
+
+let a=1; 
+let b=2; 
+[a,b]=[b,a];
+
+console.log(a); // 2
+console.log(b); // 1
+
+const c=["red","green","blue","black","yellow"]; 
+
+console.log(c); // ["red","green","blue","black","yellow"]
+[c[0],c[4]]=[c[4],c[0]];
+
+console.log(c); // ["yellow","green","blue","black","red"]
+
+
+Nested objects:
+
+Objects inside another objects allows you to represent more complex DS.
+
+Child objects is enclosed by a parent object.
+
+Person(Address{}, ContactInfo{}); 
+ShoppingCart{Keyboard{}, Mouse{}, Monitor{}};
+
+
+const person={
+    name:"John",
+    age:25,
+    address:{
+        street:"123 Main St",
+        city:"New York",
+        state:"NY"
+    },
+    contactInfo:{
+        email:"john@example.com",
+        phone:"123-456-7890"
+    }
+};
+
+console.log(person.name);  // John
+
+console.log(person.address.street); // "123 Main St"
+
+console.log(person.contactInfo.email); // "John@example.com"
+
+for (const a of person.contact)
+{
+    console.log(a);
+}
+
+
+Eg:2
+
+class Person{
+    constructor(name,age,...address) {
+        this.name=name;
+        this.age=age;
+        this.address=new Address(...address);
+        this.displayDetails=function()
+        {
+            console.log(`Name: ${this.name}, Age: ${this.age}`);
+            this.address.displayAddress();
+        }
+    }
+}
+class Address{
+    constructor(street, city, state)
+    {
+        this.street=street;
+        this.city=city;
+        this.state=state;
+        this.displayAddress=function()
+        {
+            console.log(`Street: ${this.street}, City: ${this.city}, State: ${this.state}`);
+        }
+    }
+}
+
+const p1= new Person("John",22,"124 Main St","Beijing","Japan");
+const p2= new Person("Jane",34,"121 Jack St","London","United Kingdom");
+
+p1.displayDetails();
+
+p2.displayDetails();
+
+Array of objects:
+
+const a=[{name:"apple",color:"red",calories:95},
+    {name:"orange",color:"orange",calories:45},
+    {name:"banana",color:"yellow",calories:105},
+    {name:"coconut",color:"white",calories:158},];
+
+console.log(a[3].calories);
+
+const b=a.filter((e)=> e.calories>100); 
+
+console.log(b); 
+
+a.push({name:"pinapple",color:"yellow",calories:134});
+
+a.sort((a,c)=>c.calories-a.calories);
+
+console.log(a);
+
+a.splice(1,2); // remove
+
+a.forEach(c=> console.log(c));
+
+
+sort () function: used to sort the element in lexicographic order(String alphabetical)
+
+
+let a =["x","b","p","e"];
+
+a.sort();
+
+console.log(a); // ["b", "e", "p", "x"]
+
+let b = [1,5,3,4,2,10];
+
+b.sort(); 
+
+console.log(b); // [1,10, 2, 3, 4, 5]
+
+
+let b=[5,2,8,1,9]; 
+
+b.sort((p,q)=>p-q); 
+
+console.log(b); // [1, 2, 5, 8, 9]
+
+b.sort((a,b)=>a-b).reverse();
+
+console.log(b); // [9, 8, 5, 2, 1]
+
+const c=[{name:"apple",color:"red",calories:95},
+    {name:"orange",color:"orange",calories:45},
+    {name:"banana",color:"yellow",calories:105},
+    {name:"coconut",color:"white",calories:158},];
+    
+const d=c.sort((a,b)=>b.calories-a.calories);
+
+console.log(d);
+
+
+
+const c=[{name:"apple",color:"red",calories:95},
+    {name:"orange",color:"orange",calories:45},
+    {name:"banana",color:"yellow",calories:105},
+    {name:"coconut",color:"white",calories:158},];
+    
+const d=c.sort((a,b)=>a.calories-b.calories);
+
+console.log(d);
+
+const e = d.sort((a,b)=>a.name.localeCompare(b.name));
+
+console.log(e);
 
 */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
