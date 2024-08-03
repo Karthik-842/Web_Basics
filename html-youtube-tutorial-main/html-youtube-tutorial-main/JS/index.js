@@ -299,6 +299,298 @@ let password;
 password = generatePassword(passwordLength,incLowerCase,incUpperCase,incNumbers,incSymbols);
 console.log(password); 
 
+
+Callback function:
+
+sum(display,4,3);
+
+function sum(callback,x,y)
+{
+    let z=x+y; 
+    callback(z);
+}
+
+function display(result)
+{
+    console.log(result);
+}
+
+
+ForEach function:
+
+
+let n=[1,2, 3,4,5,6,7,8];
+n.forEach(display);
+
+function display(value)
+{
+    console.log(value);
+}
+
+
+Map function:
+
+let n=[1,2,3,4,5,6,7,8]; 
+
+let s=n.map(square); 
+
+function square(value)
+{
+    return Math.pow(value,2);
+}
+
+console.log(s);
+
+Filter function:
+
+let n=[1,2,3,4,5,6,7,8];
+
+let s=n.filter(isEven);
+
+function isEven(value)
+{
+    if(value%2==0)
+    {
+        return true;
+    }
+}
+
+console.log(s);
+
+Reduce function:
+
+let n=[1,2,3,4,5,6,7,8];
+
+let d=n.reduce(product);
+
+function product(accumulator, currentValue)
+{
+    return accumulator*currentValue;
+}
+
+console.log(d);
+
+Function declaration:
+
+function sum(a,b)
+{
+    return a+b;
+}
+let d=sum(3,4);
+console.log(d);
+
+
+Function expression:
+
+let d= function(a,b)
+{
+    return a+b;
+};
+
+console.log(d(1,2));
+
+
+let n=[1,2,3,4,5,6,7,8,9];
+
+let s=n.map(function(value)
+{
+    return Math.pow(value,2);
+});
+
+console.log(s);
+
+
+Arrow functions:
+
+let a=[1,2,3,4,5,6,7,8,9]; 
+
+let s=a.map((e)=>Math.pow(e,3));
+
+console.log(s);
+
+
+let d=(x,y)=> x+y; 
+console.log(d(2,3));
+
+
+let a=[1,2,3,4,5,6,7,8,9]; 
+
+let b= a.filter((e)=> e%2==1); 
+
+console.log(b);
+
+
+let a=[1,2,3,4,5,6,7,8]; 
+let b= a.reduce((a,b)=>a*b);
+console.log(b);
+
+
+Objects in JS: Real world entity
+
+
+let p={
+    name:"Karthik",
+    age:25,
+    city:"Bangalore",
+    address:  "abc",
+    sayHello: function(){ console.log("Hello"); }
+};
+
+console.log(p.name);
+p.sayHello();
+
+This keyword:
+
+let p={
+    name:"Karthik",
+    age:25,
+    city:"Bangalore",
+    address:  "abc",
+    sayHello: function(){ console.log(`Hello This is ${this.name}`); }
+};
+
+p.sayHello(); 
+
+
+Constructor: special method for defining the properties and methods of objects:
+
+function Person(name, age, city)
+{
+    this.name=name;
+    this.age=age;
+    this.city=city;
+    this.sayHello=function(){ console.log(`Hello This is ${this.name}`); };
+}
+
+let p1=new Person("John", 24,"Bangalore");
+
+let p2=new Person("Jack",11,"Japan");
+
+p1.sayHello();
+p2.sayHello();
+
+console.log(p1.city+" "+p2.city);
+
+
+Class:
+
+(ES6 Feature) provide a more structured and clearer way to work with objects and functions
+
+
+class Person{
+    constructor(name, age, city)
+    {
+        this.name=name;
+        this.age=age;
+        this.city=city;
+    }
+
+    displayDetails()
+    {
+        console.log(`Name: ${this.name}, Age: ${this.age}, City: ${this.city}`);
+    }
+}
+
+const p1=new Person("John",22,"Bangalore");
+
+const p2=new Person("Jack",11,"Japan");
+
+p1.displayDetails();
+
+p2.displayDetails();
+
+console.log(p1.city+" "+p2.city);
+
+
+Static - keyword that defines properties/methods belong to that class.
+
+class Hello{
+    static a=10;
+    
+    constructor(a)
+    {
+        this.a=a;
+    }
+}
+
+console.log(Hello.a); // 10  -- Static
+
+
+let h1=new Hello(20); // nrl
+
+console.log(h1.a); // 20
+
+Inheritance:
+
+
+class Animal
+{
+    constructor(name, sound)
+    {
+        this.name=name;
+        this.sound=sound;
+        this.getSound = function(){console.log(`${this.name} sounds ${this.sound}`);};
+    }
+}
+
+class Dog extends Animal
+{
+    constructor(name, sound, breed)
+    {
+        super(name, sound);
+        this.breed=breed;
+        this.breedName = function() {
+            console.log(`${this.name} is a ${this.breed}`);
+        };
+    }
+}
+
+const d1=new Dog("Buddy", "Woof", "Labrador");
+
+d1.getSound(); // Buddy sounds Woof
+
+d1.breedName(); // Buddy is a Labrador
+
+
+
 */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
